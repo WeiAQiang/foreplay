@@ -39,7 +39,7 @@ body {
 	
 }
 
-body > .container {
+body .page-container {
 	width: 960px;
 	margin: 0px auto;
 }
