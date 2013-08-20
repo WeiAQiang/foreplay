@@ -87,8 +87,9 @@
 	.size(@size, @size);
 }
 
+html { font-size: 62.5%; } // Set HTML to 10px font-size. Makes math much easier.
 .font-size(@px-size){
-	@rem-size: @px-size / @base-font-size;
+	@rem-size: @px-size / 10;
 	font-size: ~"@{px-size}px";
 	font-size: ~"@{rem-size}rem";
 }
