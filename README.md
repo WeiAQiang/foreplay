@@ -7,7 +7,8 @@ Goals
 No design assumptions.
 Remain bloat-free.
 
-TODO
+Roadmap
 -------
-Slowly add more until world domination.
-Add SASS version?
+- Slowly add more until world domination.
+- Add SASS version?
+- Integrate Typeplate (https://github.com/typeplate/typeplate.github.io)
