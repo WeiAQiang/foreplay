@@ -7,14 +7,14 @@
 }
 
 // Image replace
-.ir( @width, @height, @file-1x, @file-2x) when not (@file-2x) {
+.ir() {
 	font: 0/0 a;
 	text-shadow: none;
 	color: transparent;
+}
 
-	br {
-		display: none;
-	}
+.ir( @width, @height, @file-1x) {
+	.ir();
 
 	display: inline-block;
 
@@ -23,19 +23,8 @@
 	background-image: url("@{file-1x}");
 }
 
-.ir( @width, @height, @file-1x, @file-2x) when (@file-2x) {
-	font: 0/0 a;
-	text-shadow: none;
-	color: transparent;
-
-	br {
-		display: none;
-	}
-
-	display: inline-block;
-
-	width: @width*1px;
-	height: @height*1px;
+.ir( @width, @height, @file-1x, @file-2x) {
+	.ir( @width, @height, @file-1x);
 	.retina-image( @width, @height, @file-1x, @file-2x );
 }
 
