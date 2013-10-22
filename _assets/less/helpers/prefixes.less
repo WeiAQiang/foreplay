@@ -28,22 +28,38 @@
 	transition: @transition;
 }
 
-
-// Transformations
-.rotate(@degrees) {
-	-webkit-transform: rotate(@degrees);
-	-moz-transform: rotate(@degrees);
-	-ms-transform: rotate(@degrees);
-	-o-transform: rotate(@degrees);
-	transform: rotate(@degrees);
+.transistionTransform(@transition) {
+	-webkit-transition: -webkit-transform @transition;
+	-moz-transition: -moz-transform @transition;
+	-ms-transition: -ms-transform @transition;
+	-o-transition: -o-transform @transition;
+	transition: transform @transition;
 }
 
-.translate(@x, @y) {
-	-webkit-transform: translate(@x, @y);
-	-moz-transform: translate(@x, @y);
-	-ms-transform: translate(@x, @y);
-	-o-transform: translate(@x, @y);
-	transform: translate(@x, @y);
+
+// Transformations
+.transform(...) {
+	-webkit-transform: @arguments;
+	-moz-transform: @arguments;
+	-o-transform: @arguments;
+	-ms-transform: @arguments;
+	transform: @arguments;
+}
+
+.rotation(@deg:5deg){
+	.transform( rotate(@deg) );
+}
+
+.scale(@ratio:1.5){
+	.transform( scale(@ratio) );
+}
+
+.translate(@x:0, @y:0) {
+	.transform( translate(@x, @y) );
+}
+
+.translate3d(@transition) {
+	.transform( translate3d(@transition) );
 }
 
 
